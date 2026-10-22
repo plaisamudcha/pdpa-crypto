@@ -1,0 +1,34 @@
+{
+  "name": "@pdpa/crypto",
+  "version": "0.1.0",
+  "description": "Field-level encryption for personal data (PDPA): AES-256-GCM, envelope encryption (KEK/DEK), blind index, crypto-shredding",
+  "type": "module",
+  "exports": {
+    ".": {
+      "bun": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc --noEmit",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "prettier": {
+    "printWidth": 150,
+    "singleQuote": true
+  }
+}
